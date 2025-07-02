@@ -6,8 +6,8 @@ def build()
 {
   sh "mvn package"
 }
-def deploymentartifact(jobname,IP,contextpath)
+def deploymentartifact(jobname,ip,contextpath)
 {
-  sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${IP}:/var/lib/tomcat10/webapps/${contextpath}.war"
+  sh "scp /var/lib/jenkins/workspace/${jobname}/webapp/target/webapp.war ubuntu@${ip}:/var/lib/tomcat10/webapps/${contextpath}.war"
 }
   
