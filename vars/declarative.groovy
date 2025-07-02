@@ -6,6 +6,6 @@ def artifact()
 {
   sh "mvn package"
 }
-def deployartifact(jobname,ip,contextpath)
+
 
   
