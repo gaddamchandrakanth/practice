@@ -4,5 +4,5 @@ def download-code(repo)
 }
 def artifact()
 {
-  sh 'mvn package'
+  sh "mvn package"
 }
