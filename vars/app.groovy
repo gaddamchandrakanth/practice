@@ -1,4 +1,6 @@
----
+def mynginx()
+{
+  sh "'''---
 apiVersion: v1
 kind: Pod
 metadata:
@@ -10,4 +12,5 @@ spec:
   containers:
     - name: mynginx
       image: nginx
-...
+...'''"
+}
