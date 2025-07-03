@@ -1,8 +1,8 @@
-def Downloadcode(repo)
+def Download(repo)
 {
   git "https://github.com/IntelliqDevops/${repo}.git"
 }
-def artifact()
+def build()
 {
   sh "mvn package"
 }
