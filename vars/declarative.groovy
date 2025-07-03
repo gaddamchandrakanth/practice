@@ -1,6 +1,6 @@
-def download-code()
+def download-code(repo)
 {
-  git "https://github.com/IntelliqDevops/maven.git"
+  git "https://github.com/IntelliqDevops/$(repo).git"
 }
 def artifact()
 {
