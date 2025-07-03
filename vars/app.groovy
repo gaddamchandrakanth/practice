@@ -1,7 +1,6 @@
 def mynginx()
 {
-  sh "'''---
-apiVersion: v1
+  sh "apiVersion: v1
 kind: Pod
 metadata:
   name: nginx-pod
@@ -11,6 +10,5 @@ metadata:
 spec:
   containers:
     - name: mynginx
-      image: nginx
-...'''"
+      image: nginx"
 }
