@@ -1,0 +1,5 @@
+CREATE  :      ansible-vault    CREATE    playbook.yml
+VIEW    :                        VIEW      
+EDIT    :                        EDIT       
+ENCRYPT :                       ENCRYPT                   [ Cnvert to vault ]
+DECRYPT :                       DECRYPT                   [ Convert password less ]
