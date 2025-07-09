@@ -1,0 +1,12 @@
+update IP address 
+       in /etc/ansible/hosts
+
+   ex:  
+      [Jenkins]
+      172.31.81.239
+      
+      [qa]
+      172.31.81.75
+  
+      [prod]
+      172.31.81.123
