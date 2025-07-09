@@ -1,0 +1,25 @@
+@Library('chandu')_
+node('built-in') 
+{
+    stage('Download')
+    {
+        scripted.Download('maven')
+    }
+    stage('build')
+    {
+        scripted.build()
+    }
+    stage('deployment')
+    {
+        scripted.deploymentartifact("scripted-library","172.31.82.210","check")
+    }
+    stage('Testing')
+    {
+        scripted.Download('FunctionalTesting')
+        scripted.selenium()
+    }
+    stage('delivery')
+    {
+        scripted.deploymentartifact("scripted-library","172.31.93.219","test")
+    }
+}

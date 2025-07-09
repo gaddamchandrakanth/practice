@@ -1,0 +1,13 @@
+---
+- name: install maven
+  hosts: all
+  tasks:
+    - name: install maven in all server's
+      apt:
+        name: "{{a}}"
+        state: "{{b}}"
+        update_cache: "{{c}}"  
+
+
+
+command : ansible-playbook global-scope-variable.yml  -b --extra-vars "a=maven b=present c=yes" 

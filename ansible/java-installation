@@ -1,0 +1,9 @@
+---
+- name: install java in the all server's
+  hosts: all
+  tasks:
+    - name: install java
+      apt:
+        name: "{{a}}"
+        state: "{{b}}"
+        update_cache: "{{c}}"

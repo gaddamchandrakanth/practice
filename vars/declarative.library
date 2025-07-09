@@ -1,0 +1,59 @@
+@Library('chandu')_
+pipeline
+{
+    agent any
+    stages
+    {
+        stage('download')
+        {
+            steps
+            {
+                script
+                {
+                    declarative.downloadcode("maven")
+                }
+            }
+        }
+        stage('build')
+        {
+            steps
+            {
+                script
+                {
+                    declarative.artifact()
+                }    
+            }
+        }
+        stage('deployement')
+        {
+            steps
+            {
+                script
+                {
+                    declarative.deploy("pipeline","172.31.27.100","check")
+                }
+            }
+        }
+        stage('testing')
+        {
+            steps
+            {
+                script
+                {
+                    declarative.downloadcode("FunctionalTesting")
+                    declarative.java()
+                }
+            }
+        }
+        stage('delivery')
+        {
+            steps
+            {
+                script
+                {
+                    declarative.deploy("pipeline","172.31.26.162","test")
+                }
+            }
+        }
+    }
+}

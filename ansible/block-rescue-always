@@ -1,0 +1,21 @@
+---
+- name: implementing the block and rescue and always operation
+  hosts: all
+  tasks:
+    - block:
+      - name: install the git on all ubuntu server's
+        apt:
+          name: git
+          state: present
+          update_cache: yes
+      rescue:
+      - name: installation of git on all ubuntu server's
+        yum:
+          name: git
+          state: present
+          update_cache: yes
+      
+      always:
+        - name: display success message
+          debug:
+            msg: "succesfully installed"

@@ -1,0 +1,14 @@
+---
+- name: impementing playscope variable
+  hosts: all
+  vars:
+    a: tomcat10
+    b: present
+    c: yes
+  tasks:
+    - name: install the tomcat10 in all servers
+      apt:
+        name: "{{a}}"
+        state: "{{b}}"
+        update_cache: "{{c}}"
+

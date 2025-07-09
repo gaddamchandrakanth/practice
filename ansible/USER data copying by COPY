@@ -1,0 +1,15 @@
+---
+- name: create the user and copy the user data information into newly created user
+  hosts: all
+  tasks:
+    - name: create the new user
+      user:
+        name: "{{a}}"
+        password: "{{b}}"
+        home: "{{c}}"
+        shell: "{{d}}"
+        comment: "{{e}}"
+    - name: copy the user data information in to the new user folder
+      copy:
+        src: "{{f}}"
+        dest: "{{g}}"

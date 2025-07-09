@@ -1,0 +1,38 @@
+---
+- name: install tomcat10 and tomcat10-admin
+  hosts: all
+  tasks:
+    - name: install tomcat10
+      apt:
+        name: tomcat10
+        state: present
+        update_cache: yes
+    - name: install tomcat10-admin
+      apt:
+        name: tomcat10-admin
+        state: present
+        update_cache: no
+    - name: copy the tomcat-user.xml file 
+      copy:
+        src: tomcat-user.xml
+        dest: /etc/tomcat10
+    - name: change the port mapping from 8080 to 9090
+      replace:
+        regexp: 8080
+        replace: 9090
+        path: /etc/tomcat10/server.xml
+    - name: restart the tomcat10
+      service:
+        name: tomcat10
+        state: restarted
+    - name: pause from 30 seconds
+      pause:
+        seconds: 20
+    - name: check the response of server1
+      uri:
+        url: http://18.118.27.91:9090
+        status_code: 200
+    - name: check the response of server2
+      uri:
+        url: http://3.148.244.162:9090
+        status_code: 200
