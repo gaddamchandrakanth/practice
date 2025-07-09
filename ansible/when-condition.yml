@@ -1,0 +1,16 @@
+---
+- name: apply when to install the git s/w
+  hosts: all
+  tasks:
+    - name: install the git s/w if os is ubuntu
+      apt:
+        name: git
+        state: present
+        update_cache: yes
+      when : ansible_distribution=="ubuntu"
+    - name: install the git s/w if os is redhat
+      yum:
+        name: git
+        state: present
+        update_cache: yes
+      when: ansible_distribution=="redhat"
