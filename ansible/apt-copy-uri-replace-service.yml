@@ -34,5 +34,6 @@
         status_code: 200
     - name: check the response of server2
       uri:
-        url: http://3.148.244.162:9090
+        url: http://3.148.244.162:9090  
         status_code: 200
+ [above give url should pub IP]
