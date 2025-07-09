@@ -11,3 +11,5 @@
         - pause.yml
         - uri.yml
         - debug.yml
+
+        so no handler can not be used in childplaybook 
