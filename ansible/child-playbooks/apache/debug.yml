@@ -1,0 +1,4 @@
+---
+- name: display installation 
+  debug:
+    msg: successfully installed

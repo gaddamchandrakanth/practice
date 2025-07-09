@@ -1,0 +1,4 @@
+---
+- name: pause for the 30 seconds
+  pause:
+    seconds: 30

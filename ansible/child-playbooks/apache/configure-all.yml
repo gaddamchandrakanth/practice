@@ -1,0 +1,13 @@
+---
+- name: configure httpd/apache2
+  hosts: all
+  tasks:
+    - name: call all child-playbooks
+      include_tasks: "{{item}}"
+      with_items:
+        - apt.yml
+        - copy.yml
+        - service-handler.yml      
+        - pause.yml
+        - uri.yml
+        - debug.yml
