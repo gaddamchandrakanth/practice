@@ -1,0 +1,48 @@
+---
+- name: construct the ci-cd 
+  hosts: jenkins
+  tasks:
+    - name: install jenkins
+      apt:
+        name: "{{item}}"
+        state: present
+        update_cache: yes
+      with_items:
+        - openjdk-17-jdk
+        - maven
+        - git
+    - name: deploy the jenkins.war file
+      get_url:
+        url: https://get.jenkins.io/war-stable/2.504.3/jenkins.war
+        dest: /home/ubuntu
+
+- name: install tomcat10 in all servers
+  hosts: qaserver
+  tasks:
+    - name: install tomcat10 and tomcat10-admin
+      apt:
+        name: "{{item}}"
+        state: present
+        update_cache: yes
+      with_items:
+        - tomcat10
+        - tomcat10-admin
+    - name: copy the tomcat-user.xml file
+      copy:
+        src: tomcat-user.xml
+        dest: /etc/tomcat10
+      notify: restart the tomcat10
+  handlers:
+    - name: restart the tomcat10
+      service:
+        name: tomcat10
+        state: restarted
+    - name: check the response of all server's
+      uri:
+        url: "{{item}}"
+        status_code: 200
+      with_items:
+        -  http://172.31.88.206
+        -  http://172.31.81.239
+
+
