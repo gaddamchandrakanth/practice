@@ -1,0 +1,6 @@
+---
+- name: copy the file tomcat-user.xml 
+  copy:
+    src: "{{e}}"
+    dest: "{{f}}"
+  notify: restart tomcat

@@ -1,0 +1,4 @@
+---
+- name: dispaly succesful
+  debug:
+    msg: "{{h}}"

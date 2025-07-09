@@ -1,0 +1,9 @@
+---
+- name: install tomcat 10
+  apt:
+    name: "{{item}}"
+    state: "{{c}}"
+    update_cache: "{{d}}"
+  with_items:
+    - "{{a}}"
+    - "{{b}}"
