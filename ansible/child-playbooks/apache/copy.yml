@@ -4,3 +4,4 @@
     content: "hello world"
     dest: /var/www/html/index.html
   notify: restart the apache2
+
