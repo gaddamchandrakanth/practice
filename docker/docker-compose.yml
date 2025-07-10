@@ -1,0 +1,16 @@
+---
+services:
+  database:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: CHANDU
+      MYSQL_USER: CHANDU
+      MYSQL_PASSWORD: CHANDU
+      MYSQL_DATABASE: CHANDU
+  web:
+    image: wordpress
+    ports:
+      - 9090:80
+    links:
+      - database:mysql
+
