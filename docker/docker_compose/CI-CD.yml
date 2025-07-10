@@ -16,3 +16,4 @@ services:
       - 6060:8080
     links:
       - myjenkins:prod
+
