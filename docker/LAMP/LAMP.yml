@@ -18,3 +18,11 @@ services:
     links:
       - database:mysql
       - myhttpd:httpd
+
+Apache : Web server, handles requests
+MySQL: Database server
+PHP: 
+     🛑 Why PHP Doesn’t Need a Port
+       - PHP is not a web server.
+       - It’s a scripting language runtime, used behind Apache or Nginx.
+       - It executes code and returns output 
