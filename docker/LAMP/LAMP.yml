@@ -1,0 +1,20 @@
+---
+services:
+  database:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: CHANDU
+      MYSQL_ROOT_USER: CHANDU
+      MYSQL_PASSWORD: CHANDU
+      MYSQL_DATABASE: CHANDU
+  myhttpd:
+    image: httpd
+    ports:
+      - 9090:80
+    links:
+      - database:mysql
+  myphp:
+    image: php:7.2-apache
+    links:
+      - database:mysql
+      - myhttpd:httpd
