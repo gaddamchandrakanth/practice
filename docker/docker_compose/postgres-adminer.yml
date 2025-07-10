@@ -1,0 +1,14 @@
+---
+services:
+  database:
+    image: postgres
+    environment:
+      POSTGRES_USER: CHANDU
+      POSTGRES_PASSWORD: CHANDU
+      POSTGRES_DB: CHANDU
+  admin:
+    image: adminer
+    ports:
+      - 9090:8080
+    links:
+      - database:postgres
