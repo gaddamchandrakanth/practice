@@ -1,0 +1,18 @@
+---
+services:
+  myjenkins:
+    image: jenkins/jenkins
+    ports:
+      - 9090:8080
+  QAserver:
+    image: tomee
+    ports:
+      - 7070:8080
+    links:
+      - myjenkins:QA
+  PRODserver:
+    image: tomee
+    ports:
+      - 6060:8080
+    links:
+      - myjenkins:prod
