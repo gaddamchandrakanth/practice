@@ -17,3 +17,10 @@ services:
     links:
       - hub:selenium/hub
 
+how it work:
+ 
+     install realvnc viewer
+        search bar : 54.219.128.128:5901 / 54.219.128.128:5902
+        p/w : secret
+           * tap any where app-networks-webbrowsing-chrome/firefox
+         
