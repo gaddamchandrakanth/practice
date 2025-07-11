@@ -16,3 +16,7 @@ b) sharable docker volume ( more advance )
                    
 c) docker volumes containers / docker volume
 
+    COMMAND's :
+      docker volume create  ---
+      docker volume ls 
+      docker volume inspect ---
