@@ -14,17 +14,17 @@ b) [sharable docker volume] ( more advance )
                               then data in u1 can see from u2 and more data too 
                                                 SAME PROCESS 3rd CONTAINER ALSO
                    
-c) [docker volumes containers / docker volume]
-
+c) [docker volumes containers / docker volume]                    
+                                                                            
     COMMAND's :
       docker volume create  ---
       docker volume ls 
       docker volume inspect ---
            command :
-                 { docker run --name u1 -it -v myvolume: /tmp ubuntu }
-                                                        (/tmp : default folder inside ubuntu)
-                                                        instead can give our own like /test then
-                                                                                inside ubuntu it will cfreate automaticaly 
+                                                    { docker run --name u1 -it -v myvolume: /tmp ubuntu }
+                                                                                            (/tmp : default folder inside ubuntu)
+                                                                                              instead can give our own like /test then
+                                                                                              inside ubuntu it will cfreate automaticaly 
                   here:
                      docker volume inspect myvolume ( no need of link )
                       now we can see complete info which was added inside and outside container 
