@@ -4,21 +4,33 @@ services:
     image: selenium/hub
     ports:
       - 4400:4444
+<<<<<<< HEAD
       container_name: testing
+=======
+    container_name: testing
+>>>>>>> 28e7892 (.)
   chrome:
     image: selenium/node-chrome-debug
     ports:
       - 5901:5900
     links:
       - hub:selenium/hub
+<<<<<<< HEAD
       container_name: chrome
+=======
+    container_name: chrome
+>>>>>>> 28e7892 (.)
   firefox:
     image: selenium/node-firefox-debug
     ports:
       - 5902:5900
     links:
       - hub:selenium/hub
+<<<<<<< HEAD
       container_name: firefox
+=======
+    container_name: firfox
+>>>>>>> 28e7892 (.)
 
 
 
