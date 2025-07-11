@@ -11,7 +11,7 @@ b) sharable docker volume ( more advance )
                       Enter data in u1 container [ a b c]
                             create 2 container with 
                                                                               { docker run --name u2 -it --volumes-from u1 ubuntu }
-                              then data in u1 can see with u2 and add aslso 
+                              then data in u1 can see from u2 and more data too 
                                                 SAME PROCESS 3rd CONTAINER ALSO
                    
 c) docker volumes containers / docker volume
