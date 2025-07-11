@@ -27,4 +27,5 @@ c) docker volumes containers / docker volume
                                                                                 inside ubuntu it will cfreate automaticaly 
                   here:
                      docker volume inspect myvolume ( no need of link )
+                      now we can see complete info which was added inside and outside container 
                               best process
