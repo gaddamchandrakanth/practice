@@ -20,6 +20,9 @@ services:
       - hub:selenium/hub
       container_name: firefox
 
+
+
+
 how it work:
  
      install realvnc viewer
