@@ -1,0 +1,23 @@
+root@ip-172-31-30-231:~/practice/docker/docker_compose/project# docker container ls
+CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS          PORTS                                                        NAMES
+59db75c04efd   selenium/node-firefox-debug   "/opt/bin/entry_poin…"   20 minutes ago   Up 20 minutes   0.0.0.0:5902->5900/tcp, [::]:5902->5900/tcp                  project-firefox-1
+b16ef177da27   selenium/node-chrome-debug    "/opt/bin/entry_poin…"   20 minutes ago   Up 20 minutes   0.0.0.0:5901->5900/tcp, [::]:5901->5900/tcp                  project-chrome-1
+1e86e4a94aec   selenium/hub                  "/opt/bin/entry_poin…"   20 minutes ago   Up 20 minutes   4442-4443/tcp, 0.0.0.0:4400->4444/tcp, [::]:4400->4444/tcp   project-hub-1
+
+if we want name section our then give as container_name: anyword
+ex: 
+---
+services:
+  hub:
+    image: selenium/hub
+    ports:
+      - 4400:4444
+    container_name: testing
+
+
+
+root@ip-172-31-30-231:~/practice/docker/docker_compose/project# docker container ls
+CONTAINER ID   IMAGE                         COMMAND                  CREATED          STATUS          PORTS                                                        NAMES
+6a308b79eb85   selenium/node-chrome-debug    "/opt/bin/entry_poin…"   12 seconds ago   Up 11 seconds   0.0.0.0:5901->5900/tcp, [::]:5901->5900/tcp                  chrome
+231ec2dcf62c   selenium/node-firefox-debug   "/opt/bin/entry_poin…"   12 seconds ago   Up 11 seconds   0.0.0.0:5902->5900/tcp, [::]:5902->5900/tcp                  firfox
+e45bb43f12f9   selenium/hub                  "/opt/bin/entry_poin…"   12 seconds ago   Up 11 seconds   4442-4443/tcp, 0.0.0.0:4400->4444/tcp, [::]:4400->4444/tcp   testing
