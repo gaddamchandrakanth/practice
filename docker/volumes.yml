@@ -3,9 +3,9 @@ creater a { mkdir /data }
                                         given / then it will be created at same level of root
 
 TYPES:
-a) simple docker volume
+a) [simple docker volume]
                               normal command :                               { docker run --name c1 -it -v /data ubuntu }
-b) sharable docker volume ( more advance ) 
+b) [sharable docker volume] ( more advance ) 
                ex: 
                     we create a 3 container's 
                       Enter data in u1 container [ a b c]
@@ -14,7 +14,7 @@ b) sharable docker volume ( more advance )
                               then data in u1 can see from u2 and more data too 
                                                 SAME PROCESS 3rd CONTAINER ALSO
                    
-c) docker volumes containers / docker volume
+c) [docker volumes containers / docker volume]
 
     COMMAND's :
       docker volume create  ---
