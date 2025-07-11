@@ -20,3 +20,5 @@ services:
       - hub:selenium/hub
     container_name: firfox
 
+check:
+  REAL VNC viewer and provide ip of chrome and firefox in search bar with port number
