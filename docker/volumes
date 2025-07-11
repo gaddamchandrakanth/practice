@@ -4,14 +4,15 @@ creater a { mkdir /data }
 
 TYPES:
 a) simple docker volume
-                              normal command : { docker run --name c1 -it -v /data ubuntu }
+                              normal command :                               { docker run --name c1 -it -v /data ubuntu }
 b) sharable docker volume ( more advance ) 
                ex: 
                     we create a 3 container's 
                       Enter data in u1 container [ a b c]
                             create 2 container with 
-                              { docker run --name u2 -it --volumes-from u1 }
-                                     then data in u1 can see with u2 and add aslso 
-                                                                SAME PROCESS 3rd CONTAINER ALSO
+                                                                              { docker run --name u2 -it --volumes-from u1 ubuntu }
+                              then data in u1 can see with u2 and add aslso 
+                                                SAME PROCESS 3rd CONTAINER ALSO
                    
 c) docker volumes containers / docker volume
+
