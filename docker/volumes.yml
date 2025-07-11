@@ -23,3 +23,6 @@ c) docker volumes containers / docker volume
            command :
                  { docker run --name u1 -it -v myvolume: /tmp ubuntu }
                                                         (/tmp : default folder inside ubuntu)
+                  here:
+                     docker volume inspect myvolume ( no need of link )
+                              best process
