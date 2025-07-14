@@ -1,0 +1,14 @@
+conditions for image creation:
+  ❌ What Does “Not Installing Dependencies” Mean?
+
+       It means your Docker image doesn't contain the software or libraries your app needs to run.
+            So when the container starts, it crashes or fails because something critical is missing.
+
+it means that if we are cfreating an image of own then as per the ENTRYPOINT  dependency should be installed in it 
+
+ex: 
+    FROM         UBUNTU
+    RUN          apt-get update
+    RUN          apt-get install -y  nginx 
+    EXPOSE       80
+    ENTRYPOINT   ["nginx","-g","daemon off;"]
