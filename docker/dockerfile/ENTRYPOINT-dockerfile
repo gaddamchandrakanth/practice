@@ -1,0 +1,11 @@
+FROM ubuntu
+MAINTAINER chandu
+USER root
+WORKDIR /
+RUN apt-get update
+RUN apt-get install -y git openjdk-17-jdk maven
+ADD https://get.jenkins.io/war-stable/2.504.3/jenkins.war .
+EXPOSE 9090
+ENTRYPOINT ["java","-jar","jenkins.war"]
+COPY 1 .
+

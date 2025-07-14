@@ -1,0 +1,8 @@
+DIND : Docker in Docker 
+
+example : 
+You want to build CI -CD inside the Docker containers 
+
+so the USER will be root
+
+USER root
