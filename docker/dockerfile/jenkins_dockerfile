@@ -1,0 +1,8 @@
+FROM ubuntu
+MAINTAINER chandu
+RUN apt-get update
+RUN apt-get install -y maven
+RUN apt-get install -y git tomcat10 tomcat10-admin
+WORKDIR  /root
+ADD https://get.jenkins.io/war-stable/2.504.3/jenkins.war .
+
