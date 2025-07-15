@@ -3,3 +3,7 @@ VIEW    :                        VIEW
 EDIT    :                        EDIT       
 ENCRYPT :                       ENCRYPT                   [ Cnvert to vault ]
 DECRYPT :                       DECRYPT                   [ Convert password less ]
+
+command to execute playbook of vault :
+     
+               ansible-playbook playbook1.yml --ask-vault-pass
