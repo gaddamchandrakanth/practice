@@ -7,3 +7,6 @@
         name: chandu
         password: 123
 
+to execute the above playbook
+command : 
+          ansible-playbook playbook1.yml --ask-vault-pass
