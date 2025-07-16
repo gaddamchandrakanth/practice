@@ -10,6 +10,9 @@ Null Networks:
 Overlay Networks:
          container's running on multiple servers, we use O.Networks
 
+-------------------------------------------------------------------------------------------------------------------------------------------------------------------
+to check on single network how many container got connected :
+                                              Docker Network inspect Network_name
             COMMAND's: 
                  -  Docker Network ls
                  -  Docker Network create --driver bridge ___   
@@ -22,4 +25,6 @@ Overlay Networks:
 Delete Network:
       single Network:        docker network rm -f __
       all create Networks:   docker network prune 
+
+
                 
