@@ -16,4 +16,6 @@ Overlay Networks:
                                         ex:-          
                                                docker network create --driver bridge chandu
                  -  Docker Network Connect [Network name] [container name/ID]
+                                   Disconnect 
+                       By this we can command we add network to  new conatiners directly if not added while docker run command 
                 
