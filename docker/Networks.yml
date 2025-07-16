@@ -2,7 +2,7 @@ Bridge Networks:
          Normally when a container created it will be on B.Networks 
             - [if we create a multiple container's on single server]
 Host Networks:
-         creating only 1 container on single server [server IP become container IP] 
+         creating only 1 container on single server [server IP become container IP]    command :- { docker run -d --name t1 --network host tomcat }
               - mainly used for containers huge database 
 Null Networks:
          can not communicate with other network , which is isolate 
