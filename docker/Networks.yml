@@ -18,4 +18,8 @@ Overlay Networks:
                  -  Docker Network Connect [Network name] [container name/ID]
                                    Disconnect 
                        By this we can command we add network to  new conatiners directly if not added while docker run command 
+
+Delete Network:
+      single Network:        docker network rm -f __
+      all create Networks:   docker network prune 
                 
