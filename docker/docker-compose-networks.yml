@@ -1,0 +1,26 @@
+---
+services:
+  myjenkins:
+    image: jenkins/jenkins
+    ports:
+      - 7070:8080
+    networks:
+      - abc
+  qa-server:
+    images: tomcat
+    ports:
+      - 9090:8080
+    networks:
+      networks:
+        - xyz
+  prod-server:
+    image: tomcat
+    ports:
+      - 8080:8080
+    networks:
+      - xyz
+networks:
+  - abc: {}
+  - xyz: {}
+
+

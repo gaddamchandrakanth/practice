@@ -1,0 +1,10 @@
+FROM ubuntu
+MAINTAINER chandu
+USER root
+WORKDIR /root
+COPY file9
+ADD https://github.com/gaddamchandrakanth/practice.git .
+RUN apt-get update
+RUN apt-get install -y openjdk-17-jdk
+CMD ["java","-jar","jenkins.war"]
+

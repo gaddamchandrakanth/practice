@@ -1,0 +1,16 @@
+---
+services:
+  database:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: chandu
+      MYSQL_USER: chandu
+      MYSQL_DATABASE: chandu
+  myadminer:
+    image: adminer
+    ports:
+      - 9090:8080
+networks:
+  default:
+    external:
+      name: gaddam
