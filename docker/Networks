@@ -1,0 +1,19 @@
+Bridge Networks:
+         Normally when a container created it will be on B.Networks 
+            - [if we create a multiple container's on single server]
+Host Networks:
+         creating only 1 container on single server [server IP become container IP] 
+              - mainly used for containers huge database 
+Null Networks:
+         can not communicate with other network , which is isolate 
+              - important data [change it from B.network to N.network]
+Overlay Networks
+         container's running on multiple servers, we use O.Networks
+
+            COMMAND's: 
+                 -  Docker Network ls
+                 -  Docker Network create --driver bridge ___   
+                                        ex:-          
+                                               docker network create --driver bridge chandu
+                 -  Docker Network Connect [Network name] [container name/ID]
+                
