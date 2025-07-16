@@ -11,7 +11,7 @@ Overlay Networks:
          container's running on multiple servers, we use O.Networks
 
 -------------------------------------------------------------------------------------------------------------------------------------------------------------------
-to check on single network how many container got connected :
+To check on single NETWORK how many CONTAINER's got connected :
                                               Docker Network inspect Network_name
             COMMAND's: 
                  -  Docker Network ls
