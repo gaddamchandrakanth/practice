@@ -1,43 +1,26 @@
-Bridge Networks:
-         Normally when a container created it will be on B.Networks 
-            - [if we create a multiple container's on single server]
-Host Networks:
-         creating only 1 container on single server [server IP become container IP]    command :- { docker run -d --name t1 --network host tomcat }
-              - mainly used for containers huge database 
-Null Networks:
-         can not communicate with other network , which is isolate 
-              - important data [change it from B.network to N.network]
-Overlay Networks:
-         container's running on multiple servers, we use O.Networks
--------------------------------------------------------------------------------------------------------------------------------------------------------------------
-To check on single NETWORK how many CONTAINER's got connected :
-                                              Docker Network inspect Network_name
-            COMMAND's: 
-                 -  Docker Network ls
-                 -  Docker Network create --driver bridge ___   
-                                        ex:-          
-                                               docker network create --driver bridge chandu
-                 -  Docker Network Connect [Network name] [container name/ID]
-                                   Disconnect 
-                       By this we can command we add network to  new conatiners directly if not added while docker run command 
----------------------------------------------------------------------------------------------------------------------------------------------------------------
-we can use subnet in the command by that the IP will be assign in that range
-          --subnet 10.0.0.0/24  
-                           [  here always given lessthan / equal to 32 ]
-32-24=8
-2^8 [2 to the power of 8]
-     which means =256[ 2*2*2*2*2*2*2*2 ]
-     so from 10.0.0.1
-            .........
-            10.0.0.255
-the IP will be assign in this range only to the container while creating Network
-command_ex:
-    Docker Network create --driver bridge --subnet 10.0.0.0/24 network_name
-
-------------------------------------------------------------------------------------------------------
-Delete Network:
-      single Network:        docker network rm -f __
-      all create Networks:   docker network prune 
+---
+services:
+  myjenkins:
+    image: jenkins/jenkins
+    ports:
+      - 7070:8080
+    networks:
+      - abc
+  qa-server:
+    images: tomcat
+    ports:
+      - 9090:8080
+    networks:
+      networks:
+        - xyz
+  prod-server:
+    image: tomcat
+    ports:
+      - 8080:8080
+    networks:
+      - xyz
+networks:
+  - abc: {}
+  - xyz: {}
 
 
-                
