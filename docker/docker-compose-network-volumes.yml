@@ -1,0 +1,26 @@
+---
+services:
+  database:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: CHANDU
+      MYSQL_DATABASE: CHANDU
+    networks:
+      - abc
+    volumes:
+      - mydata:/var/lib/mysql
+  mywordpress:
+    image: wordpress
+    ports:
+      - 9090:8080
+    networks:
+      - xyz
+    volumes:
+      - browser:/var/www/html
+networks:
+  abc: {}
+  xyz: {}
+volumes:
+  mydata: {}
+  browser: {}
+
