@@ -1,0 +1,25 @@
+---
+services:
+  jenkin-server:
+    image: jenkins/jenkins
+    ports:
+      - 7070:8080
+    networks:
+      - devops
+    volumes:
+      - jenkins:/var/jenkins_home
+  qa-server:
+    image: tomcat
+    ports:
+      - 9090:8080
+    networks:
+      - course
+    volumes:
+      - aqserver:/usr/local/tomcat/webapps
+networks:
+  devops: {}
+  course: {}
+volumes:
+  jenkins: {}
+  aqserver: {}
+

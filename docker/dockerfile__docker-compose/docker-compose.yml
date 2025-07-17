@@ -1,0 +1,11 @@
+---
+services:
+  ubuntu-jenkins:
+    build: .
+    ports:
+      - 7070:9090
+  tomcat10:
+    image: tomcat
+    ports:
+      - 6060:9090
+

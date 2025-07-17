@@ -1,0 +1,11 @@
+FROM ubuntu
+MAINTAINER chandu
+USER root
+WORKDIR /root
+COPY file1 .
+ADD https://get.jenkins.io/war-stable/2.504.3/jenkins.war .
+RUN apt-get update
+RUN apt-get install -y openjdk-17-jdk maven
+EXPOSE 9090
+CMD ["java","-jar","jenkins.war"]
+
