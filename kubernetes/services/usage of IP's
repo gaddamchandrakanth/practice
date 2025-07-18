@@ -1,5 +1,8 @@
 clusterIP: 
-        it can communicate within the cluster
+        it can not communicate outside the cluster [comminucation between pods]
+           ex: 
+              /wordpress /mysql- clusterIP 
+               mysql comminucate with wordpress internally using an IP 
 NodePort: 
         given for the TEAM [tester/devlopers] to make changes
 LoadBalancer:
