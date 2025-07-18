@@ -34,3 +34,8 @@ spec:
       port: 9090
   selector:
     storage: permanent-storage
+
+NOTE:  
+      it will get same name to that pod 
+          even after the self healing of pod 
+            so connection to volume will not get disturbed
