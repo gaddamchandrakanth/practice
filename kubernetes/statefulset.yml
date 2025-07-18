@@ -1,0 +1,36 @@
+---
+apiVersion: apps/v1
+kind: StatefulSet
+metadata:
+  name: tomcat-statefulset
+  labels:
+    storage: permanent-storage
+spec:
+  replicas: 2
+  serviceName: service-tomcat
+  selector:
+    matchLabels:
+      storage: permanent-storage
+  template:
+    metadata:
+      name: tomcat-pod
+      labels:
+        storage: permanent-storage
+    spec:
+      containers:
+        - name: mytomcat
+          image: tomcat
+---
+apiVersion: v1
+kind: Service
+metadata:
+  name: service-tomcat
+  labels:
+    storage: permanent-storage
+spec:
+  type: LoadBalancer
+  ports:
+    - targetPort: 8080
+      port: 9090
+  selector:
+    storage: permanent-storage
