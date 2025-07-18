@@ -22,3 +22,8 @@ spec:
     - targetPort: 80
       port: 80
       nodePort: 30115
+  selector:
+    app: proxy
+--------------------------------------
+note: 
+  we can not use the selector directly in pod but match labels in pod and selector
