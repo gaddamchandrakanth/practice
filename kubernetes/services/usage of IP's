@@ -2,9 +2,9 @@ clusterIP:
         it can not communicate outside the cluster [comminucation between pods]
            ex: 
               /wordpress /mysql- clusterIP 
-               mysql comminucate with wordpress internally using an IP 
+               mysql comminucate with wordpress internally using an IP
 NodePort: 
         given for the TEAM [tester/devlopers] to make changes
 LoadBalancer:
         exposed to outside the world 
-           
+           here normally we do not need to use [nodeport] because cloud provider will provide external IP  
