@@ -1,0 +1,20 @@
+---
+apiVersion: v1
+kind: Pod
+metadata:
+  name: tomcat-pod
+  labels:
+    app: webbrowser
+spec:
+  containers:
+    - name: my-tomcat
+      image: tomcat
+      ports:
+        - containerPort: 8080
+          hostPort: 9090
+      volumeMounts:
+        - name: temporary-data-storage
+          mountPath: /usr/local/tomcat/webapps
+  volumes:
+    - name: temporary-data-storage
+      emptyDir: {}
