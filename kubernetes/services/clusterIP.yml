@@ -35,4 +35,5 @@ spec:
   selector:
     work: ci-cd
 
+For statefulset only we use {serviceName} in above 
 
