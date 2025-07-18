@@ -1,0 +1,7 @@
+clusterIP: 
+        it can communicate within the cluster
+NodePort: 
+        given for the TEAM [tester/devlopers] to make changes
+LoadBalancer:
+        exposed to outside the world 
+           
