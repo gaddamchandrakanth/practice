@@ -21,4 +21,17 @@ script to result 1 to 10 tables
            j=j+1
         i=i+1
 
+CLASS AND OBJECT:
+
+      class chandu:
+           def sum(self,a,b):
+               print(a+b)
+       class gaddam:
+           def div(self,a,b):
+               print(a/b) 
+a=chandu()
+b=gaddam()
+
+a.sum(10,30)
+b.div(500,600)
 
