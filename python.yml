@@ -26,12 +26,13 @@ CLASS AND OBJECT:
       class chandu:
            def sum(self,a,b):
                print(a+b)
-       class gaddam:
+      class gaddam:
            def div(self,a,b):
                print(a/b) 
-a=chandu()
-b=gaddam()
+               
+      a=chandu()
+      b=gaddam()
 
-a.sum(10,30)
-b.div(500,600)
+      a.sum(10,30)
+      b.div(500,600)
 
