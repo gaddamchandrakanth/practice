@@ -1,10 +1,10 @@
 import subprocess
 
+container_name=input("container name:")
+own_port=input("own port:")
+port=input("default port:")
+image_name=input("image:")
 
-image_name=input("enter the image name for image:")
-
-image=input("enter the image name to be downloaded:")
-
-subprocess.call("docker run --name %s -d -P %s" %(image_name,image),shell=True)
+subprocess.call("docker run --name %s -d -p %s:%s %s"%(container_name,own_port,port,image_name),shell=True)
 
 
