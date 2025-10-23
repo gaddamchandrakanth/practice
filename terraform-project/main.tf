@@ -10,7 +10,7 @@ provider "aws" {
     region = "us-east-1"
 }
 resource "aws_s3_bucket" "testing" {
-    bucket = "chandu2513"
+    bucket = "chandu9963291"
     tags={
         Name="testing"
         Environment= "testing"
