@@ -8,7 +8,7 @@ terraform {
 }
 provider "aws" {
   region = "us-west-1"
-  access_key = var.access_key
+  access_key = "AKIAZ3AKIAZ3MGNK624Z2QQMPT"
   secret_key = var.secret_key
 }
 resource "aws_vpc" "vpc_testing" {
