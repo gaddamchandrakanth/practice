@@ -7,7 +7,8 @@
         name: git
         state: present
         update_cache: yes
-      when : ansible_distribution=="ubuntu"
+      when : ansible_distribution=="ubuntu"            # "Ubuntu"  not "ubuntu" [case sensitive]
+      
     - name: install the git s/w if os is redhat
       yum:
         name: git
