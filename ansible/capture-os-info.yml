@@ -4,8 +4,12 @@
   tasks:
     - name: capture OS info
       debug:
-        var: "{{ansible_distribution}}"
+        var: ansible_distribution
     - name: capture os version
       debug:
-        var: "{{ansible_distribution_version}}"
+        var: ansible_distribution_version
+
+  only {{ " " }} this for the MSG not for the VAR
+    debug: capture OS name
+      msg: "{{ansible_distribution}}"
 
