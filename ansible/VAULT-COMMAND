@@ -4,6 +4,7 @@ EDIT    :                        EDIT
 ENCRYPT :                       ENCRYPT                   [ Cnvert to vault ]
 DECRYPT :                       DECRYPT                   [ Convert password less ]
 
-command to execute playbook of vault :
+
+if install S/W inside the playbook then command :
      
                ansible-playbook playbook1.yml --ask-vault-pass
