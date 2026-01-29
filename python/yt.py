@@ -167,12 +167,10 @@ contact_book = {
      { "name": "abc", "phone": "123456", "email": "abc@gmail.com"},
      }
   -----------------------------------------------------------------------------------------------
-          
+   FUCTIONS:
+In Ansible, you create child playbooks to reuse tasks.
 
-
-
-
-
+In Python, you create functions to reuse code & call them by using fuction.
 
 
 
