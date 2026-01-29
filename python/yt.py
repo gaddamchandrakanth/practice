@@ -74,25 +74,51 @@ Set ()/{}
    Ordered ❌:         can not call lik as above  
    Mutable ✅:     can change the values from 20 to 30 
 Duplicates ❌:         not allowed
+
+Dictionary {}()
+   Ordered ❌:         can not call lik as above  
+   Mutable ✅:     can change the values from 20 to 30 
+Duplicates ❌:         not allowed for keys   { key: pairs}
+
 ----------------------------------------------------------------------------------------
+DEVOPS REAL TIME EXAMPLES:
 
 in devops when these used ?
 
 Q: having the worker nodes form the EKS cluster, where shud  keep the ip's ?
-answer :  list[]
+answer :  
 
+list[]
+------
 expalantion
        here worker nodes IP's will change due to autosclaing group 
-so ip change shud be accept ✅
-ad also call the IP ✅ 
+      so ip change shud be accept ✅
+      ad also call the IP ✅ 
+   Ordered ✅, Mutable ✅, Duplicates ✅
+----------------------------------------------------------------------------------------
+TUPLE :
+SERVER CONFIGARATIOn:  
+                      A tuple containing fixed informsation about a server[ IP,OD,VERSION ]. once set, these details should not change
+immutable system setting:
+                      Information about the region, availability zone & instance type, which remains constant for the duration of a deployement.
+            - server configaration:       ( '192.168.1.1' , 'ubuntu', '18.04') 
+            - Immutable system settings:  ( 'us-east', 'us-east-1a', 'm5.large' )
+            
+     Ordered ✅, Mutable ❌, Duplicates ✅
+ -----------------------------------------------------------------------------------------------------------
+SET:
+----
+ActiveServices :  
+                 A set of active services running on a server, where uniqueness (no duplicates) is crucial.
+Unique Error codes:
+                 A set of unique error codes encountered during operations, useful for monitoring and alerting.
 
-Other example:                                                                 other example:
-TUPLE ()                                                                          Set ()/{}
- configartiomn of OS linux will not change ✅                                set of service : only one jenkins no other jebkins present 
-                    &
-      can not change server availability zone ❌:
+  - active services:    ( 'nginx', 'redis', 'mysql', 'jenkins')
+  - Unique Error Codes: (404, 500, 502)
 
-dictionary
+        Ordered ✅, Mutable ✅, Duplicates ❌,
+---------------------------------------------------------------------------------------------------------------------------------------------------------------
+dictionary 
 {
 key ----  value
 "name" :  "abc",    
@@ -100,8 +126,24 @@ key ----  value
 "city  :  "hyd"       
 "adds  :  "ameerpet"   
 
-duplicate here not allowed 
+duplicate here not allowed             Ordered ✅, Mutable ❌, Duplicates ✅
+
   ❌   :   ✅
+
+  dictionaries:
+-------------
+              Environment variables: key-value pair representing environment variable for an application, where keys are unique and values can change
+
+              Configurations: Dictionary of configurations, such as timeout setting and retry limits,where keys represents the setting and values are the parametres.
+               
+                       - environment Variables: { 
+                                                  'DB_HOST: 'db.example.com',
+                                                   'DB_USER: 'admin'
+                                                 }
+                        - Configurations: {
+                                            'timeout: 30,
+                                            'retires': 3
+                                            }
 ---------------------------------------------------------------
  example:
  Q: have list of usernames , i need to remove duplicates and store them efficiently
@@ -126,57 +168,6 @@ contact_book = {
      }
   -----------------------------------------------------------------------------------------------
           
-REAL-TIME DEVOPS
-
-LIST:
-------
-SERVER IP's:
-               A list of IP addresses of servers in a custer, which may change as server are added or removed.
-               
-        - server IP's: ['192.2.5.7', '29.9.5.3', '30.6.3.9']
-
-TUPLE:
-------
-SERVER CONFIGARATIOn:  
-                      A tuple containing fixed informsation about a server[ IP,OD,VERSION ]. once set, these details should not change
-immutable system setting:
-                      Information about the region, availability zone & instance type, which remains constant for the duration of a deployement.
-            - server configaration:       ( '192.168.1.1' , 'ubuntu', '18.04') 
-            - Immutable system settings:  ( 'us-east', 'us-east-1a', 'm5.large' )
-            
-SET:
-----
-ActiveServices :  
-                 A set of active services running on a server, where uniqueness (no duplicates) is crucial.
-Unique Error codes:
-                 A set of unique error codes encountered during operations, useful for monitoring and alerting.
-
-  - active services:    ( 'nginx', 'redis', 'mysql', 'jenkins')
-  - Unique Error Codes: (404, 500, 502)
-
-  ----------------here there are no duplicates present------------------ 
-dictionaries:
--------------
-              Environment variables: key-value pair representing environment variable for an application, where keys are unique and values can change
-
-              Configurations: Dictionary of configurations, such as timeout setting and retry limits,where keys represents the setting and values are the parametres.
-               
-                       - environment Variables: { 
-                                                  'DB_HOST: 'db.example.com',
-                                                   'DB_USER: 'admin'
-                                                 }
-                        - Configurations: {
-                                            'timeout: 30,
-                                            'retires': 3
-                                            }
-                                  
-                    
-      
-
-       
-
-
-
 
 
 
