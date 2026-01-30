@@ -172,8 +172,15 @@ In Ansible, you create child playbooks to reuse tasks.
 
 In Python, you create functions to reuse code & call them by using fuction.
 
+-----------------------------------------------------------------------------------------------------------------------------------------------------------------
+day-2 
+vim fuction1.py
+---------------------
+def greet():
+    print ('hello . abc')
 
-
+greet()                    -------------------- now we are calling the above fuction [ some data was stored in the fuction ]
+--------------------
 
 
 
