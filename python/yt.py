@@ -179,8 +179,33 @@ vim fuction1.py
 def greet():
     print ('hello . abc')
 
-greet()                    -------------------- now we are calling the above fuction [ some data was stored in the fuction ]
+greet()                                                    -------------------- now we are calling the above fuction [ some data was stored in the fuction ]
 --------------------
+output: hello abc
+-----------------------------------------------------------------------
+vim fuction2.py
+-----------------
+def greet(name):
+    print(f'hello, name')
+
+  greet('abc')
+  greet(testing)
+---------------------
+output: hello abc
+        hello testing
+----------------------------------------------------------------------
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
