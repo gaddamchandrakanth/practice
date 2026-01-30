@@ -193,7 +193,73 @@ def greet(name):
 ---------------------
 output: hello abc
         hello testing
-----------------------------------------------------------------------
+---------------------------------------------------------------------------------------------------------------------------------------------
+fuctions and Methods both are same 
+APEND means adding the number ,EXTEND meand adding multiple number's.
+
+LIST OF Datatypes : just check the below , not much used 
+--------------------
+
+my_list = [1,2,3,4,5]
+
+my_list.apend (4)
+print("After append:",my_list)
+
+my_list.extend ( [8,9,7] )
+print("After extent:",my_list)
+
+my_list.insert (0,10)
+print("After insert:",my_insert)
+
+    #removing the first ocurrence of an element
+ my_list.remove(1)
+ print("After remove:",my_list)
+
+     #popping an element (removing and returning it)           |            removes the last num from list : [ 1,2,3,4,5], result: [1,2,3,4] 
+ popped_element = my_list.pop ()                               |  can aslo remove any num also, 
+ print ("popped element:",popped_element)                      |                               by 
+ print('After pop:", my_list)                                  |                      popped_element = my_list.pop (2)  , result will be :[1,2,4,5]  --- { here indexing 0=1,1=2,2=3 like that }
+
+    #get index of an element                              |   
+ index_of_4 = my_list.index(4)                                 |
+ print('Index of 4:", index_of_4)                              |
+
+    #counting the index of an element 
+ count_of_1 = my_list.count(1)
+ print("count of 9:", count of 1)
+
+     #sorting the list                                         |
+ my_list.sort()                                                |---    accensing order
+ print("After sort:",my_list)                                  |
+
+      #reversing the list                                       |
+ my_list.reverse()                                              | --  decending order
+ print("After reverse:", my_list)                               |  
+
+      #Copying the list
+  copied_list= my_list.copy()
+  print("copied list:", copied_list)
+
+      #clearing the list
+   my_list.clear ()
+   print("After clear :", my_list))
+
+------------------------------------------------------------
+
+list properties and fuctions            / this is important
+--------------------------------
+
+print ("Length of list:", len(my_list))
+print ("Length of copied list:', len(copied_list))
+print ("Maximam element:", max(copied_list))
+print ("minimum element:", min(copied_list))
+print ("sum of elements:", sum(copied_list))
+
+
+
+
+
+
 
 
 
