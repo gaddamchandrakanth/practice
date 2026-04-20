@@ -1,1 +1,9 @@
+if the organization wants to use the github-actions & gitlab compleyly then only shud use
+                                                      why because migrartion could takes alot of time [ rewrite the pipline-code, connect tools (docker etc..)]
 
+NOTE:  
+     they are platform oriented [ ex: terraform used to cfreate infr of cloud ]
+
+❌ plugin installtion no need
+
+  .github/workflows is where the workflow will be stored 
