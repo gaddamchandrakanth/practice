@@ -7,3 +7,66 @@ NOTE:
 ❌ plugin installtion no need
 
   .github/workflows is where the workflow will be stored 
+
+------------------------------------------
+workflow dispatch: job manually trigger
+push: automatically trigger
+
+code:
+      name: [ name of work flow ]
+      on: [ how to trigger job ]
+      jobs:
+        [job_name]:
+        runs_on: ubuntu-latest
+        steps:
+          - name: [ any name ] 
+            run: ......
+
+code:
+------------------------------------------------------------------------------------------------------------------------------------------------------------------
+name: hello world
+on: workflow_dispatch
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: build
+        run: echo "one"
+  build2:
+    runs-on: ubuntu-latest
+    needs: build                    ------------------[ if it used then seqeunce job will run , if not used tgen it will run job2 job1 job3 like this sequence ]
+    steps:
+      - name: build2
+        run: echo "two"
+  build3:
+    runs-on: ubuntu-latest
+    needs: build2                   ----------------------------  [ must give this execite the jobs seqeunce ]
+    steps:
+      - name: build3
+        run: echo "three"
+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
+  
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
