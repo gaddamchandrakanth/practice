@@ -47,7 +47,24 @@ jobs:
         run: echo "three"
 ----------------------------------------------------------------------------------------------------------------------------------------------------------------------------
   
+setings-> secrets & variables-> varibles [ new repo varible ]-> name [CHANDU] , value [ chandu]
 
+---------------------------------------------------------------------
+variables: used to store some data
+code: 
+      run: echo "test, ${{ vars.CHANDU }}"
+
+            output:  test, chandrakanth
+
+-------------------------------------------------------------------------
+secrets : used to store sensitive data [ p/w, api-tokens ]
+
+code:
+      run: echo "test, ${{secrets.DOCKER_PASS}}"    
+
+                         output :    test,***  [ it would display p/w
+
+---------------------------------------------------------------------------
 
 
 
