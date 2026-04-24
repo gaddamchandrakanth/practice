@@ -64,8 +64,38 @@ code:
 
                          output :    test,***  [ it would display p/w
 
----------------------------------------------------------------------------
+-------------------------------------------------------------------------
+name: test-today
 
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+jobs:
+  check1:
+    runs-on: ubuntu-latest
+    steps:
+     - name: test
+       run: echo "checking1, ${{vars.what1}}"
+
+  check2:
+    runs-on: ubuntu-latest
+    needs: check1
+    steps:
+      - name: test2
+        run: echo "checking2, ${{vars.what2}}"
+
+  check3:
+    runs-on: ubuntu-latest
+    needs: check2
+    steps:
+      - name: new-password
+        run: echo "test, ${{secrets.PASSWORD}}"
+
+-----------------------------------------------------------------------------------
 
 
 
