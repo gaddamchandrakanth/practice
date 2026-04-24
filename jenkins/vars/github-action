@@ -95,7 +95,43 @@ jobs:
       - name: new-password
         run: echo "test, ${{secrets.PASSWORD}}"
 
------------------------------------------------------------------------------------
+*** -----------------------------------------------------------------------------------
+to copy the file in github
+
+create a new file :
+                     index.html
+                         <test> hello world </test>
+
+  code:
+------------
+name: index
+
+on: push
+jobs:
+  print:
+    runs-on: ubuntu-latest
+    steps:
+      - name: copy file 
+        uses: actions/checkout@v6   -------[ github actions checkout ,search in google ]
+      - name: print index.html
+        run: cat index.html
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
