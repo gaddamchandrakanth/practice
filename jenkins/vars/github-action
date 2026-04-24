@@ -116,7 +116,43 @@ jobs:
       - name: print index.html
         run: cat index.html
 
+------------------------------------------------------------------------------------------------------------
+deploy static application in s3  [ AWS CLI will present if we use ubuntu-latest here for github-actions ]
+. create a s3
+   > properties : enable static website hosting  
+   > permission : bucket policy [edit]
+                  copy & paste code for pwemission relate
+. deploy
+   app code [ index.html code ] real code 
+      actions > configure [any]
 
+code:
+
+name:  deploy code to s3
+on: push
+ job:
+   deploy:
+     runs-on: ubuntu-latest
+     steps:
+       - name: take code form repo
+         uses: takeabove from
+       - name: configure AWS credentials
+         uses:  aws-actions/configure-aws-credentials@v4   ---------------- [ search : aws credentila configure github uses market place ]
+         with: 
+           aws-access-key-id: ${{ secrets.AWS_ACCESS_KEY_ID}}
+           aws-secret-acess-key: ${{ secrets.AWS_SECRET_ACCESS_KEY}}
+           aws-region: us-east-1
+
+ ----------------/ deploying static code to s3 bucket /-----------------
+
+     - name: copy static code [index.html ]
+         run: |
+           aws s3 sync . [url from s3]
+               [ check if website works by , s3-> preoperties-> bucket website end point [ webiste live ]
+         
+
+
+-------------------------------------------------------------------------------------------------------------------------------------------------
 
 
 
