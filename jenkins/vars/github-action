@@ -166,11 +166,21 @@ jobs:
      runs-on: ubuntu-latest
      steps:
        - name: testing env variable
+         env:
+           APP_ENV: test3 
          run: echo "app is connecting $APP_ENV"
 
 output:
- ✅ test2 - only job level env will be taken
+ ✅ test3 - only step level env will be taken
 
+------------------------------------------------
+ex: 
+
+name: input 
+on: 
+  workflow_dispatch:       ---------------    [ only manual trigger ]
+
+     
 
 
 
