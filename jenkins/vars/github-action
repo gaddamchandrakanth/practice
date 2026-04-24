@@ -153,7 +153,23 @@ on: push
 
 
 -------------------------------------------------------------------------------------------------------------------------------------------------
+environment will be taken at job level 
 
+name: test
+on: push
+ env:
+   APP_ENV: test1
+jobs:
+  checking:
+     env:
+       APP_ENV: test2 
+     runs-on: ubuntu-latest
+     steps:
+       - name: testing env variable
+         run: echo "app is connecting $APP_ENV"
+
+output:
+ ✅ test2 - only job level env will be taken
 
 
 
