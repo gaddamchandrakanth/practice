@@ -182,7 +182,7 @@ on:
 
 -------------------------------------------------------------------------------------------------------------------
 
-to check how is owner and what was repo:
+to check who is owner and what was repo:
 
 name: pod
 
