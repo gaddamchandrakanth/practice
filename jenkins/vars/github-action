@@ -180,7 +180,23 @@ name: input
 on: 
   workflow_dispatch:       ---------------    [ only manual trigger ]
 
-     
+-------------------------------------------------------------------------------------------------------------------
+
+to check how is owner and what was repo:
+
+name: pod
+
+on: push
+jobs:
+  one:
+    runs-on: ubuntu-latest
+    steps:
+      - name: use contaext variable
+        run:  |
+          echo "this workflowis triggered by ${{ github.actor }}
+          echo "this repository name is ${{ github.repository }}
+
+-------------------------------------------------------------------------------------------------------------------
 
 
 
